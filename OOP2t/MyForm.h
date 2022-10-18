@@ -275,22 +275,28 @@ namespace OOP2Wiciok {
 #pragma endregion
 
 	private: System::Void tbyear_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		tbyear->MaxLength = 4;
 		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
 			e->Handled = true;
+		
 	}
 	private: System::Void tbmonth_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		tbmonth->MaxLength = 2;
 		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
 			e->Handled = true;
 	}
 	private: System::Void tbday_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		tbday->MaxLength = 2;
 		if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
 			e->Handled = true;
 	}
 	private: System::Void tbsurname_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		tbsurname->MaxLength = 12;
 		if (!Char::IsLetter(e->KeyChar) && e->KeyChar != 0x08)
 			e->Handled = true;
 	}
 	private: System::Void tbname_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+		tbname->MaxLength = 12;
 		if (!Char::IsLetter(e->KeyChar) && e->KeyChar != 0x08)
 			e->Handled = true;
 	}
